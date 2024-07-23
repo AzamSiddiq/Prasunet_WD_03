@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Deck&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #2a3d40, #548687);
+    text-align: center;
+    font-family: 'Deck', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: #b0413e;
+    background-color: #ffffc7;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: scale(1.1); 
+    background-color: #f4f4a3;
+}
+
+#reset-btn, #new-btn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #1f1f1f;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    margin: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background-color: #3a3a3a;
+    transform: scale(1.05);
+}
+
+#msg {
+    color: #ffffc7;
+    font-size: 5vmin;
+    margin-top: 2rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide {
+    display: none;
+}
